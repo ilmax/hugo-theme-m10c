@@ -1,6 +1,11 @@
 {{ define "main" }}
   <article class="post">
     <header class="post-header">
+      {{ if .Params.featuredImage }}
+      <p>
+        <img class="post-header-image" src="{{ .Params.featuredImage | relURL }}" alt="{{ .Title }}" /><br>
+      </p>
+      {{ end }}
       <h1 class ="post-title">{{ .Title }}</h1>
       {{- if ne .Type "page" }}
       <div class="post-meta">
