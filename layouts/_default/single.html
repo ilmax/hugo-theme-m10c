@@ -34,6 +34,7 @@
       {{ .Content }}
     </div>
     <div class="post-footer">
+      {{ partial "share-buttons.html" . }}
       {{ template "partials/giscus.html" . }}
     </div>
   </article>
