@@ -12,6 +12,12 @@
   }
 }
 
+.series-container {
+  &>h4 {
+    margin-block-end: .8em
+  }
+}
+
 .post-content {
   & > pre,
   .highlight {
