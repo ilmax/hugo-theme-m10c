@@ -13,7 +13,7 @@
 }
 
 .series-container {
-  &>h4 {
+  & > h4 {
     margin-block-end: .8em
   }
 }
@@ -22,6 +22,7 @@
   & > pre,
   .highlight {
     margin: 1em 0;
+    position: relative;
   }
 
   & > pre,
@@ -29,6 +30,27 @@
   .highlight > div {
     border-left: 0.4em solid rgba($primary-color, .8);
     padding: 1em 1em;
+  }
+
+  .copy-code {
+    color: $primary-color;
+    box-sizing: border-box;
+    transition: 0.2s ease-out;
+    cursor: pointer;
+    user-select: none;
+    background: $darkest-color;
+    border: 1px solid $primary-color;
+    padding: 5px 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0 0.15rem;
+    display: none;
+  }
+
+  div.highlight:hover .copy-code,
+  pre:hover .copy-code {
+    display: block;
   }
 
   blockquote {
